@@ -1,0 +1,125 @@
+/* ################ */
+/* Global variables */
+/* ################ */
+:root {
+  --main-color: #10cab7;
+  --secondary-color: #2c4755;
+  --section-padding: 60px;
+  --section-background: #f6f6f6;
+  --main-duration: 0.5s;
+}
+/* ############ */
+/* Global rules */
+/* ############ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* ############## */
+/* Header section */
+/* ############## */
+header {
+  padding: 20px;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .logo {
+  width: 60px;
+}
+header .container .links {
+  position: relative;
+}
+header .container .links::after {
+  content: "";
+  border: 10px solid transparent;
+  border-bottom: 10px solid #f6f6f6;
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  display: none;
+}
+header .container .links:hover:after {
+  display: block;
+}
+header .container .links .menu-icon {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+header .container .links .menu-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+header .container .links .menu-icon span:nth-child(2) {
+  margin: 5px 0;
+  width: 60%;
+  transition: width var(--main-duration);
+}
+header .container .links:hover .menu-icon span:nth-child(2) {
+  width: 100%;
+}
+header .container .links nav {
+  display: none;
+}
+header .container .links:hover nav {
+  display: block;
+}
+header .container .links nav ul {
+  list-style: none;
+  position: absolute;
+  width: 200px;
+  top: 26px;
+  right: 0;
+  background-color: #f6f6f6;
+}
+header .container .links nav ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  color: #333;
+  border-bottom: 1px solid #333;
+  transition: padding-left var(--main-duration);
+}
+header .container .links nav ul li a:hover {
+  padding-left: 30px;
+}
+header .container .links nav ul li:last-child a {
+  border-bottom: 1px solid transparent;
+}
