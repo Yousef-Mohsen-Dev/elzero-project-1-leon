@@ -123,3 +123,31 @@ header .container .links nav ul li a:hover {
 header .container .links nav ul li:last-child a {
   border-bottom: 1px solid transparent;
 }
+/* ############### */
+/* Landing section */
+/* ############### */
+.landing {
+  height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(../assets/images/landing.jpg);
+  background-size: cover;
+}
+.landing .container {
+  width: 320px;
+  max-width: 100%;
+  padding: 0;
+}
+.landing .container h1 {
+  margin: 0;
+  color: var(--main-color);
+  font-size: 50px;
+}
+.landing .container p {
+  margin-top: 20px;
+  line-height: 1.8;
+  font-size: 19px;
+}
