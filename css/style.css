@@ -151,3 +151,36 @@ header .container .links nav ul li:last-child a {
   line-height: 1.8;
   font-size: 19px;
 }
+/* ############### */
+/* feature section */
+/* ############### */
+section.feature {
+  background-color: var(--section-background);
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+section.feature .container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+section.feature .container .feat {
+  padding: 20px;
+}
+section.feature .container .feat i {
+  font-weight: 800;
+  font-size: 3em;
+  color: var(--main-color);
+}
+section.feature .container .feat h2 {
+  font-weight: 800;
+  font-size: 1.17em;
+  margin: 30px 0;
+}
+section.feature .container .feat p {
+  color: #777;
+  font-size: 17px;
+  line-height: 1.8;
+}
