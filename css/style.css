@@ -7,6 +7,7 @@
   --section-padding: 60px;
   --section-background: #f6f6f6;
   --main-duration: 0.5s;
+  scroll-behavior: smooth;
 }
 /* ############ */
 /* Global rules */
@@ -46,7 +47,33 @@ body {
     width: 1170px;
   }
 }
-
+/* ############## */
+/* Components */
+/* ############## */
+.big-title {
+  padding-top: var(--section-padding);
+  text-align: center;
+}
+.big-title h2 {
+  font-size: 100px;
+  color: #ebeced;
+  font-weight: 800;
+  margin: 0;
+}
+.big-title h2 + p {
+  margin-top: -30px;
+  font-size: 20px;
+  text-align: center;
+  color: #797979;
+}
+@media (max-width: 767px) {
+  .big-title h2 {
+    font-size: 60px;
+  }
+  .big-title h2 + p {
+    margin-top: -20px;
+  }
+}
 /* ############## */
 /* Header section */
 /* ############## */
@@ -174,13 +201,73 @@ section.feature .container .feat i {
   font-size: 3em;
   color: var(--main-color);
 }
-section.feature .container .feat h2 {
+section.feature .container .feat h3 {
   font-weight: 800;
-  font-size: 1.17em;
   margin: 30px 0;
 }
 section.feature .container .feat p {
   color: #777;
   font-size: 17px;
   line-height: 1.8;
+}
+
+/* ################ */
+/* Services section */
+/* ################ */
+section.services {
+  height: 100vh;
+}
+section.services .wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 100px;
+}
+section.services .wrapper .col .service {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  section.services .wrapper .col .service {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+section.services .wrapper .col .service i {
+  color: var(--main-color);
+}
+section.services .wrapper .col .service .description h3 {
+  margin: 0 0 20px 0;
+}
+section.services .wrapper .col .service .description p {
+  color: #444;
+  font-weight: 300;
+  line-height: 1.6;
+}
+section.services .wrapper .col:nth-child(3) {
+  text-align: center;
+}
+@media (max-width: 1200px) {
+  section.services .wrapper .col:nth-child(3) {
+    display: none;
+  }
+}
+section.services .wrapper .col:nth-child(3) img {
+  width: 260px;
+  text-align: center;
+}
+section.services .wrapper .col:nth-child(3) div.image {
+  position: relative;
+}
+section.services .wrapper .col:nth-child(3) div.image::before {
+  content: "";
+  position: absolute;
+  height: calc(100% + 100px);
+  width: 100px;
+  top: -50px;
+  right: 0;
+  background-color: var(--secondary-color);
+  z-index: -1;
 }
