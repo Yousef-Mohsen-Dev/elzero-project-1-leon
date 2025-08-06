@@ -51,7 +51,6 @@ body {
 /* Components */
 /* ############## */
 .big-title {
-  padding-top: var(--section-padding);
   text-align: center;
 }
 .big-title h2 {
@@ -215,8 +214,10 @@ section.feature .container .feat p {
 /* Services section */
 /* ################ */
 section.services {
-  height: 100vh;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
 }
+
 section.services .wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -270,4 +271,35 @@ section.services .wrapper .col:nth-child(3) div.image::before {
   right: 0;
   background-color: var(--secondary-color);
   z-index: -1;
+}
+/* ################# */
+/* Portfolio section */
+/* ################# */
+section.portfolio {
+  background-color: var(--section-background);
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+section.portfolio .projects {
+  margin-top: 100px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+section.portfolio .projects .card {
+  background-color: #fff;
+}
+section.portfolio .projects .card img {
+  width: 100%;
+}
+section.portfolio .projects .card .text {
+  padding: 20px;
+}
+section.portfolio .projects .card .text h3 {
+  margin-bottom: 10px;
+}
+section.portfolio .projects .card .text p {
+  line-height: 1.6;
+  color: #777;
 }
