@@ -303,3 +303,75 @@ section.portfolio .projects .card .text p {
   line-height: 1.6;
   color: #777;
 }
+/* ################# */
+/* About section */
+/* ################# */
+section.about {
+  padding-top: var(--section-padding);
+  padding-bottom: calc(var(--section-padding) + 60px);
+}
+section.about .about-content {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+section.about .about-content .image {
+  width: 250px;
+  height: 375px;
+  position: relative;
+}
+section.about .about-content .image::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: calc(100% + 100px);
+  top: -50px;
+  left: -20px;
+  background-color: #ebeced;
+  z-index: -1;
+}
+section.about .about-content .image::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 300px;
+  top: -40px;
+  right: -150px;
+  border-left: 80px solid var(--main-color);
+  border-bottom: 80px solid var(--main-color);
+  z-index: -5;
+}
+@media (max-width: 992px) {
+  section.about .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  section.about .about-content .image::before,
+  section.about .about-content .image::after {
+    display: none;
+  }
+  section.about .about-content .image {
+    margin-bottom: 60px;
+  }
+}
+section.about .about-content .image img {
+  width: 100%;
+}
+section.about .about-content .text {
+  flex-basis: calc(100% - 500px);
+}
+section.about .about-content .text p:first-child {
+  font-weight: bold;
+  margin-bottom: 50px;
+  line-height: 2;
+}
+section.about .about-content .text p:last-child {
+  margin-top: 50px;
+  line-height: 2;
+  color: #777;
+}
+section.about .about-content .text hr {
+  width: 50%;
+  border-color: var(--main-color);
+}
