@@ -355,6 +355,9 @@ section.about .about-content .image::after {
   section.about .about-content .image {
     margin-bottom: 60px;
   }
+  section.about .about-content .text hr {
+    margin: 0 auto;
+  }
 }
 section.about .about-content .image img {
   width: 100%;
@@ -387,6 +390,7 @@ section.contact {
 section.contact .contact-content {
   text-align: center;
   margin-top: 80px;
+  margin-bottom: 60px;
 }
 section.contact .contact-content p:first-child {
   font-size: 35px;
@@ -395,6 +399,7 @@ section.contact .contact-content p:first-child {
   letter-spacing: -2px;
   margin-bottom: 15px;
 }
+
 section.contact .contact-content a {
   text-decoration: none;
   color: var(--main-color);
@@ -402,6 +407,14 @@ section.contact .contact-content a {
   font-weight: 800;
   margin-bottom: 15px;
   display: block;
+}
+@media (max-width: 767px) {
+  section.contact .contact-content p:first-child {
+    font-size: 25px;
+  }
+  section.contact .contact-content a {
+    font-size: 25px;
+  }
 }
 section.contact .contact-content p:last-of-type {
   font-size: 16px;
@@ -411,4 +424,16 @@ section.contact .contact-content i {
   display: inline-block;
   font-size: 16px;
   color: var(--secondary-color);
+}
+/* ############### */
+/* Footer section */
+/* ############### */
+footer {
+  background-color: var(--secondary-color);
+  padding: calc(var(--section-padding) - 30px);
+  text-align: center;
+  color: #fff;
+}
+footer span {
+  color: var(--main-color);
 }
