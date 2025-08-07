@@ -47,9 +47,9 @@ body {
     width: 1170px;
   }
 }
-/* ############## */
+/* ########## */
 /* Components */
-/* ############## */
+/* ########## */
 .big-title {
   text-align: center;
 }
@@ -58,6 +58,7 @@ body {
   color: #ebeced;
   font-weight: 800;
   margin: 0;
+  letter-spacing: -3px;
 }
 .big-title h2 + p {
   margin-top: -30px;
@@ -374,4 +375,40 @@ section.about .about-content .text p:last-child {
 section.about .about-content .text hr {
   width: 50%;
   border-color: var(--main-color);
+}
+/* ############### */
+/* Contact section */
+/* ############### */
+section.contact {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background);
+}
+section.contact .contact-content {
+  text-align: center;
+  margin-top: 80px;
+}
+section.contact .contact-content p:first-child {
+  font-size: 35px;
+  font-weight: 800;
+  color: var(--secondary-color);
+  letter-spacing: -2px;
+  margin-bottom: 15px;
+}
+section.contact .contact-content a {
+  text-decoration: none;
+  color: var(--main-color);
+  font-size: 35px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  display: block;
+}
+section.contact .contact-content p:last-of-type {
+  font-size: 16px;
+  display: inline-block;
+}
+section.contact .contact-content i {
+  display: inline-block;
+  font-size: 16px;
+  color: var(--secondary-color);
 }
